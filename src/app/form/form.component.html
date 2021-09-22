@@ -28,9 +28,9 @@
       <mat-form-field class="example-full-width"  appearance="fill">
         <mat-label>Mot de passe</mat-label>
         <input matInput  type="password" formControlName="password"  >
-        <span style="color: red;" *ngIf ="password && password.invalid && password.touched"> Ce champs est obligatoire</span>
-        <span style="color: red;" *ngIf ="password && password.invalid && password.errors.passwordValidity; else elseBloc"> 
-          Champs obligatoires</span>
+        <!-- <span style="color: red;" *ngIf ="password && password.invalid && password.touched"> Ce champs est obligatoire</span>
+        <span style="color: red;" *ngIf ="password && password.invalid && password.errors.passwordValidity; else elseBloc">  -->
+          <!-- Champs obligatoires</span> -->
            <ng-template #elsebloc>
               Vérifier les mot de passes
            </ng-template>
@@ -39,9 +39,9 @@
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Confirmer mot de passe</mat-label>
         <input matInput  type="password" formControlName="confirmpassword"  >
-        <span style="color: red;" *ngIf ="confirmpassword && confirmpassword.invalid && confirmpassword.touched"> Ce champs est obligatoire</span>
+        <!-- <span style="color: red;" *ngIf ="confirmpassword && confirmpassword.invalid && confirmpassword.touched"> Ce champs est obligatoire</span>
         <span style="color: red;" *ngIf ="confirmpassword && confirmpassword.invalid && confirmpassword.errors.passwordValidity; else elseBloc"> 
-         Champs obligatoires</span>
+         Champs obligatoires</span> -->
           <ng-template #elsebloc>
              Vérifier les mot de passes
           </ng-template>

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  FormGroup , FormControl, Validators} from '@angular/forms';
-
+import {  FormGroup , FormControl, Validators, AbstractControl} from '@angular/forms';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -12,35 +11,17 @@ export class FormComponent implements OnInit {
     nom: new FormControl('',Validators.required),
     prenom: new FormControl('',Validators.required),
     email : new FormControl('',[Validators.required, Validators.email]),
-    password : new FormControl('',[Validators.required, this.passwordsMatch]),
-    confirmpassword : new FormControl('',[Validators.required, this.passwordsMatch]),
-  
-  })
+    password : new FormControl('',[Validators.required]),
+    confirmpassword : new FormControl('',[Validators.required]),
+  },
+  this.passwordConfirming
+  )
 
-
-  passwordsMatch(control)
-  {
-   if (control.value != null)
-   {
-     var conpass=control.value;
-     var pass = control.root.password;
-     if (pass)
-     {
-       var passw = pass.value;
-       if (conpass!== "" && passw !=="")
-       {
-         if (conpass!== passw )
-         {
-           return {passwordValidity:true}
-         }
-       }
-       else
-       {
-         return null
-       }
-     }
-   }
-  }
+  passwordConfirming(c: AbstractControl): any{
+    if (c.get('password')?.value !== c.get('confirmpassword')?.value) {
+        return {invalid: true};
+    }
+}
 get nom()
 {
   return this.profileForm.get('nom');
@@ -63,7 +44,7 @@ get confirmpassword()
 } 
  
   Add() {
-    console.log(this.profileForm.value);
+    console.log(this.profileForm);
   }
   constructor() { }
 
