@@ -9,13 +9,15 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormChall4Component } from './form-chall4/form-chall4.component';
+import { FormComponent } from './form/form.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FormulaireComponent,
-    FormChall4Component
+    FormComponent,
+  
   ],
   imports: [
     BrowserModule,

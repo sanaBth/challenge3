@@ -1,0 +1,51 @@
+<div class="mat-display-3">Chanllenge 4 Form</div>
+<form  (ngSubmit)="Add()" [formGroup]="profileForm" >
+   
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nom</mat-label>
+     
+      <input type="text" matInput id="nom" formControlName="nom" value="alex" >
+
+<span style="color: red;" *ngIf ="nom && nom.invalid && nom.touched"> Ce champs est obligatoire</span>
+   
+  
+    </mat-form-field>
+
+    
+    <mat-form-field class="example-full-width"  appearance="fill">
+        <mat-label>Prénom</mat-label>
+        <input type="text" matInput   formControlName="prenom" value="alex">
+        <span style="color: red;" *ngIf ="prenom && prenom.invalid && prenom.touched"> Ce champs est obligatoire</span>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width"  appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email"  matInput  formControlName="email"  value="email" >
+       <!-- <span style="color: red;" *ngIf ="email && email.invalid " > Ce champs est obligatoire</span>-->
+        <span style="color: red;" *ngIf ="email && email.invalid && email.touched" > Le mail est invalide</span>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width"  appearance="fill">
+        <mat-label>Mot de passe</mat-label>
+        <input matInput  type="password" formControlName="password"  >
+        <span style="color: red;" *ngIf ="password && password.invalid && password.touched"> Ce champs est obligatoire</span>
+        <span style="color: red;" *ngIf ="password && password.invalid && password.errors.passwordValidity; else elseBloc"> 
+          Champs obligatoires</span>
+           <ng-template #elsebloc>
+              Vérifier les mot de passes
+           </ng-template>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Confirmer mot de passe</mat-label>
+        <input matInput  type="password" formControlName="confirmpassword"  >
+        <span style="color: red;" *ngIf ="confirmpassword && confirmpassword.invalid && confirmpassword.touched"> Ce champs est obligatoire</span>
+        <span style="color: red;" *ngIf ="confirmpassword && confirmpassword.invalid && confirmpassword.errors.passwordValidity; else elseBloc"> 
+         Champs obligatoires</span>
+          <ng-template #elsebloc>
+             Vérifier les mot de passes
+          </ng-template>
+      </mat-form-field>
+
+      <button mat-stroked-button type="submit" color="primary">Add</button>
+  </form>
