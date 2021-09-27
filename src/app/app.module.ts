@@ -16,6 +16,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { FormulaireChall5Component } from './formulaire-chall5/formulaire-chall5.component';
+import { Challenge6Component } from './challenge6/challenge6.component';
+import { TableauComponent } from './challenge6/tableau/tableau.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { FormulaireChall5Component } from './formulaire-chall5/formulaire-chall5
     BooksDetailComponent,
   
     FormulaireChall5Component,
+       Challenge6Component,
+       TableauComponent,
   
   ],
   imports: [
