@@ -48,11 +48,11 @@
     
         <mat-form-field class="example-chip-list" appearance="fill">
           <mat-label>Skills</mat-label>
-          <mat-chip-list #chipList aria-label="Fruit selection">
-            <mat-chip *ngFor="let fruit of skills"  [selectable]="selectable"
+          <mat-chip-list #chipList aria-label="skill selection">
+            <mat-chip *ngFor="let skill of skills"  [selectable]="selectable"
             [removable]="removable"
-            (removed)="remove(fruit)">
-              {{fruit}}
+            (removed)="remove(skill)">
+              {{skill}}
               <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
             </mat-chip>
             <input placeholder="New skills..." #skillINput [formControl]="skillCtrl" 
@@ -63,8 +63,8 @@
             
           </mat-chip-list>
        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-            <mat-option *ngFor="let fruit of filtredskills | async" value="fruit">
-              {{fruit}}
+            <mat-option *ngFor="let skill of filtredskills | async" value="skill">
+              {{skill}}
             </mat-option>
           </mat-autocomplete>
         </mat-form-field>

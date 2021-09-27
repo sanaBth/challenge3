@@ -49,13 +49,13 @@ selectable = true;
   constructor() {
     this.filtredskills = this.skillCtrl.valueChanges.pipe(
         startWith(null),
-        map((fruit: string | null) => fruit ? this._filter(fruit) : this.allskills.slice()));
+        map((skill: string | null) => skill ? this._filter(skill) : this.allskills.slice()));
   }
 
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 
-    // Add our fruit
+    // Add our skill
     if (value) {
       this.skills.push(value);
     }
@@ -66,8 +66,8 @@ selectable = true;
     this.skillCtrl.setValue(null);
   }
 
-  remove(fruit: string): void {
-    const index = this.skills.indexOf(fruit);
+  remove(skill: string): void {
+    const index = this.skills.indexOf(skill);
 
     if (index >= 0) {
       this.skills.splice(index, 1);
@@ -83,7 +83,7 @@ selectable = true;
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
 
-    return this.allskills.filter(fruit => fruit.toLowerCase().includes(filterValue));
+    return this.allskills.filter(skill => skill.toLowerCase().includes(filterValue));
   }
 
 
