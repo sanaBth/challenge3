@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,6 +12,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { BooksComponent } from './books/books.component';
 import { BooksDetailComponent } from './books-detail/books-detail.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { FormulaireChall5Component } from './formulaire-chall5/formulaire-chall5.component';
 
 
 @NgModule({
@@ -22,6 +26,8 @@ import { BooksDetailComponent } from './books-detail/books-detail.component';
     BooksComponent,
     BooksDetailComponent,
   
+    FormulaireChall5Component,
+  
   ],
   imports: [
     BrowserModule,
@@ -30,9 +36,11 @@ import { BooksDetailComponent } from './books-detail/books-detail.component';
     MatInputModule,
     MatButtonModule,
     FormsModule,
-    
-    ReactiveFormsModule
-
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatChipsModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

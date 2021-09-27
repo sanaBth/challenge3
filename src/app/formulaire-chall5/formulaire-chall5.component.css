@@ -1,0 +1,29 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .center-element
+  {
+      align-items: center;
+    text-align: center;
+    padding-left: 250px;
+  }
+  button
+  {
+      margin-right: 2rem;
+  }
+  .mt-3
+  {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+  .example-chip-list {
+    width: 70%;
+  }
