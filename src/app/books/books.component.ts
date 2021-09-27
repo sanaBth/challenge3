@@ -9,6 +9,9 @@ export class BooksComponent implements OnInit {
 
   constructor() { }
   book : any
+
+
+  
   books=[
     {name:"book1", author:"wiliam",date:"13/22/55"},
     {name:"book2", author:"newName",date:"13/22/55"},
