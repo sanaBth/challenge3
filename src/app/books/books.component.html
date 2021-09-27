@@ -1,0 +1,8 @@
+<div *ngFor="let b of books">
+    <p>{{b.name}}</p>
+<p> {{b.author}} </p>
+<p> {{b.date}} </p>
+<button (click)="detail(b)">detail</button>
+<p>----------------------</p>
+</div>
+<app-books-detail [childData]="book"></app-books-detail>

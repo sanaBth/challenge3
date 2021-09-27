@@ -10,6 +10,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
+import { BooksComponent } from './books/books.component';
+import { BooksDetailComponent } from './books-detail/books-detail.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { FormComponent } from './form/form.component';
     AppComponent,
     FormulaireComponent,
     FormComponent,
+    BooksComponent,
+    BooksDetailComponent,
   
   ],
   imports: [
