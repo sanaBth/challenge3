@@ -10,6 +10,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
+import { BooksComponent } from './books/books.component';
+import { BooksDetailComponent } from './books-detail/books-detail.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
@@ -23,6 +25,8 @@ import { TableauComponent } from './challenge6/tableau/tableau.component';
     AppComponent,
     FormulaireComponent,
     FormComponent,
+    BooksComponent,
+    BooksDetailComponent,
   
     FormulaireChall5Component,
        Challenge6Component,
