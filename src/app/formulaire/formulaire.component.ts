@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input, Output, EventEmitter  } from '@angular/core';
 
 import {  FormGroup , FormControl} from '@angular/forms';
 
@@ -17,7 +17,8 @@ export class FormulaireComponent implements OnInit {
   
   });
   Add() {
-    console.log(this.profileForm.value);
+   // console.log(this.profileForm.value);
+   this.profileForm.value
   }
   constructor() { }
 
