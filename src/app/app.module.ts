@@ -18,6 +18,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { FormulaireChall5Component } from './formulaire-chall5/formulaire-chall5.component';
 import { Challenge6Component } from './challenge6/challenge6.component';
 import { TableauComponent } from './challenge6/tableau/tableau.component';
+import { Form6Component } from './challenge6/form6/form6.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { TableauComponent } from './challenge6/tableau/tableau.component';
     FormulaireChall5Component,
        Challenge6Component,
        TableauComponent,
+       Form6Component,
   
   ],
   imports: [

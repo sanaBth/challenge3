@@ -1,1 +1,9 @@
-<p>tableau works!</p>
+
+    <table border="1">
+        <tr *ngFor = "let p of tablePerson;">
+            <td>{{ p.nom}} </td>
+            <td>{{ p.prenom}}</td>
+        </tr>
+    </table>
+
+<app-form6 (afficherData)="DisplayData($event)"></app-form6>

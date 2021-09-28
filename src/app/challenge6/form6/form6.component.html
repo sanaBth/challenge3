@@ -1,0 +1,25 @@
+<div class="mat-display-3">Chanllenge 4 Form</div>
+<form   [formGroup]="profileForm" >
+   
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nom</mat-label>
+     
+      <input type="text" matInput id="nom" name="nom"  formControlName="nom" value="alex" >
+
+<span style="color: red;" *ngIf ="profileForm.controls.nom && profileForm.controls.nom.invalid && profileForm.controls.nom.touched"> Ce champs est obligatoire</span>
+   
+  
+    </mat-form-field>
+
+    
+    <mat-form-field class="example-full-width"  appearance="fill">
+        <mat-label>Prénom</mat-label>
+        <input type="text" matInput  name="prenom" formControlName="prenom" value="alex">
+        <span style="color: red;" *ngIf ="profileForm.controls.prenom && profileForm.controls.prenom.invalid && profileForm.controls.prenom.touched"> Ce champs est obligatoire</span>
+      </mat-form-field>
+
+
+      <button mat-stroked-button (click)="afficheForm(profileForm)" type="submit" color="primary">Afficher</button>
+  </form>
+
+ 
