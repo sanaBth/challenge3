@@ -18,6 +18,9 @@ export class CalculServiceService {
    if (critiria == "userId"){
     newList = list.filter(todo=> todo.userId == value)
    }
+   if (critiria == "username"){
+    newList = list.filter(todo=> todo.username == value)
+   }
    return newList.length
    
   }
