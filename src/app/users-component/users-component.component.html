@@ -1,0 +1,11 @@
+<h5>Liste des utulisateurs</h5>
+
+<table class="table-primary">
+    <tbody>
+       
+        <tr *ngFor = "let t of listUsers;">
+            <th scope="row">{{ t.name}} </th> <td scope="row">{{ t.username}} </td>  <td>{{ t.email}} </td>
+        </tr>
+    </tbody>
+</table>
+<input type="text" ><button type="submit">Vérifier</button>
