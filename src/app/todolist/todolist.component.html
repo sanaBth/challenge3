@@ -1,10 +1,10 @@
 <h5>Liste des to do list</h5>
 
-<table class="table-primary">
-    <tbody>
-       
-        <tr *ngFor = "let t of Todolist;">
-            <th scope="row">{{ t.id}} </th> <td scope="row">{{ t.title}} </td>  <td>{{ t.completed}} </td>
-        </tr>
-    </tbody>
-</table>
+
+<ul>
+    <li *ngFor = "let t of Todolist;">
+        {{ t.id}}. {{ t.title}} - {{ t.completed}}
+    </li>
+</ul>
+<button type="submit" (click)="completedJob()">Bilan</button>
+{{message}}

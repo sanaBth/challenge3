@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Todo} from 'src/app/model/todo';
-import { CalculServiceService } from '../calcul-service.service';
+import { CalculServiceService } from 'src/app/service/calcul-service.service';
 
 @Component({
   selector: 'app-todolist',
@@ -12,6 +12,12 @@ export class TodolistComponent implements OnInit {
 //TodoArray : Todo[] = [];
 //tableTodo = TodoArray;
 public number = [] ;
+public x : number; 
+public y : number; 
+public z : number; 
+public m: number; 
+public message : any;
+public total: any;
   Todolist=[
   
     {"userId": 1, "id": 1, "title": "delectus aut autem", "completed":false},
@@ -23,13 +29,22 @@ public number = [] ;
 
   constructor(private _todoservice : CalculServiceService) { }
   
- 
+  completedJob()
+  {
+   // console.log(this.x);
+   this.total=this.z;
+   this.m = this.x;
+   this.message = "le nombre de to do completed est égal à "+this.m+" par rapport au total des todo "+this.total
+  }
 
   ngOnInit(): void
    {
-     console.log(this._todoservice.getNumberOf(this.Todolist,"completed", true));
-     
+     //console.log(this._todoservice.getNumberOf(this.Todolist,"completed", true));
+     this.x = this._todoservice.getNumberOf(this.Todolist,"completed", true);
+     this.y =this._todoservice.getNumberOf(this.Todolist,"completed", false);
+     this.z = this.x + this.y;
    // return getNumberOf (this.Todolist[],"completed", "false" );
+   
   }
 
 }
