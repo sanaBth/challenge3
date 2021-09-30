@@ -19,6 +19,9 @@ import { FormulaireChall5Component } from './formulaire-chall5/formulaire-chall5
 import { Challenge6Component } from './challenge6/challenge6.component';
 import { TableauComponent } from './challenge6/tableau/tableau.component';
 import { Form6Component } from './challenge6/form6/form6.component';
+import { TodolistComponent } from './todolist/todolist.component';
+import { CalculServiceService } from './calcul-service.service';
+import { UsersComponentComponent } from './users-component/users-component.component';
 
 
 @NgModule({
@@ -33,6 +36,8 @@ import { Form6Component } from './challenge6/form6/form6.component';
        Challenge6Component,
        TableauComponent,
        Form6Component,
+       TodolistComponent,
+       UsersComponentComponent,
   
   ],
   imports: [
@@ -46,9 +51,11 @@ import { Form6Component } from './challenge6/form6/form6.component';
     ReactiveFormsModule,
     MatIconModule,
     MatChipsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+  
+
   ],
-  providers: [],
+  providers: [CalculServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
