@@ -27,6 +27,8 @@ public number = [] ;
 
   ngOnInit(): void
    {
+     console.log(this._todoservice.getNumberOf(this.Todolist,"completed", true));
+     
    // return getNumberOf (this.Todolist[],"completed", "false" );
   }
 
