@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import {Utilisateur} from 'src/app/model/utilisateur';
 import { CalculServiceService } from '../service/calcul-service.service';
 @Component({
@@ -12,8 +13,10 @@ export class UsersComponentComponent implements OnInit {
   
    message :any;
    x:any;
+   nombre:any;
    valeur:any;
    username:any;
+   
   //listUsers : Utilisateur[]; 
   listUsers=[
       {id: 1, name: "Leanne Graham", username: "Bret", email:"Sincere@april.biz"},
@@ -21,20 +24,19 @@ export class UsersComponentComponent implements OnInit {
       {id: 3, name: "Clementine Bauch", username: "Samantha", email:"Nathan@yesenia.net"}];
       constructor(private _todoservice : CalculServiceService) { }
 
-    verifier(username : any)
+    verifier(param:any)
     {
-    //  this.serverName = username;
-     // this.nom = this.value;
-      let x = this._todoservice.getNumberOf(this.listUsers,"username",username );
-      //this.message = "le nombre d'utilisateur ayant un username  "+valeur+" est égal à "+this.x
-
-      console.log(this.x);
+    
+     this.username = param;
+      this.nombre = this._todoservice.getNumberOf(this.listUsers,"username",this.username );
+      this.message = "le nombre d'utilisateur ayant un username  "+this.username +" est égal à "+this.nombre
+      //console.log(this.nombre);
     }
 
     ngOnInit(): void
     {
-      //console.log(this._todoservice.getNumberOf(this.Todolist,"completed", true));
-      this.x = this._todoservice.getNumberOf(this.listUsers,"username", this.valeur);
+           this.x = this._todoservice.getNumberOf(this.listUsers,"username", "Bret");
+      //console.log(this.x);
     }
   
 

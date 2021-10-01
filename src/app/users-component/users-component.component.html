@@ -8,5 +8,9 @@
         </tr>
     </tbody>
 </table>
-<p><input type="text" [(ngModel)]="myInput"  name="username" (click)="verifier(myInput)"><button type="submit">Vérifier</button></p>
-{{message}}
+<p><input type="text" [(ngModel)]="username" name="username" >
+    <button type="submit" (click)="verifier(username)">Vérifier</button>
+</p>
+<p >{{message}}</p>
+
+
