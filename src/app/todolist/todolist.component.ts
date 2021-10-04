@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Todo} from 'src/app/model/todo';
 import { CalculServiceService } from 'src/app/service/calcul-service.service';
+import { TodoserviceService } from '../service/todoservice.service';
 
 @Component({
   selector: 'app-todolist',
@@ -11,6 +12,8 @@ export class TodolistComponent implements OnInit {
 
 //TodoArray : Todo[] = [];
 //tableTodo = TodoArray;
+listTodo = [] as  any;
+
 public number = [] ;
 public x : number; 
 public y : number; 
@@ -27,7 +30,8 @@ public total: any;
  
  
 
-  constructor(private _todoservice : CalculServiceService) { }
+  constructor(private _todoservice : CalculServiceService,
+    private _todofromhttp : TodoserviceService) { }
   
   completedJob()
   {
@@ -44,7 +48,7 @@ public total: any;
      this.y =this._todoservice.getNumberOf(this.Todolist,"completed", false);
      this.z = this.x + this.y;
    // return getNumberOf (this.Todolist[],"completed", "false" );
-   
+   this._todofromhttp.getTodo().subscribe(data=> this.listTodo = data);
   }
 
 }

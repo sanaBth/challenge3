@@ -12,5 +12,14 @@
     <button type="submit" (click)="verifier(username)">Vérifier</button>
 </p>
 <p >{{message}}</p>
+<h5>Liste des utulisateurs from http</h5>
 
-
+<table class="table-primary">
+    <tbody>
+       
+        <tr *ngFor = "let t of listUs;">
+            <th scope="row">{{ t.name}} </th> <td scope="row">{{ t.username}} </td>  <td>{{ t.email}} </td>
+            <td><a (click)="getItem(t.id)" href="#">voir To do</a></td>
+        </tr>
+    </tbody>
+</table>
