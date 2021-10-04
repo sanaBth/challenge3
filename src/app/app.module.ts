@@ -30,6 +30,7 @@ import { Path1Component } from './path1/path1.component';
 import { ErrorsComponentComponent } from './errors-component/errors-component.component';
 import { SalleLisrComponent } from './salle-lisr/salle-lisr.component';
 import { DetailSalleComponent } from './detail-salle/detail-salle.component';
+import { DetailTodoComponent } from './detail-todo/detail-todo.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { DetailSalleComponent } from './detail-salle/detail-salle.component';
        appRoutes,
        ErrorsComponentComponent,
        SalleLisrComponent,
-       DetailSalleComponent
+       DetailSalleComponent,
+       DetailTodoComponent
   
   ],
   imports: [

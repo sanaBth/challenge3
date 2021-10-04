@@ -19,7 +19,7 @@
        
         <tr *ngFor = "let t of listUs;">
             <th scope="row">{{ t.name}} </th> <td scope="row">{{ t.username}} </td>  <td>{{ t.email}} </td>
-            <td><a (click)="getItem(t.id)" href="#">voir To do</a></td>
+            <td><a routerLink="UserList/t.id" (click)="onSelect(t)">voir To do</a></td>
         </tr>
     </tbody>
 </table>

@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { DetailSalleComponent } from './detail-salle/detail-salle.component';
+import { DetailTodoComponent } from './detail-todo/detail-todo.component';
 import { ErrorsComponentComponent } from './errors-component/errors-component.component';
 import { Path1Component } from './path1/path1.component';
 import { Path2Component } from './path2/path2.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:'404',component:ErrorsComponentComponent},
   
   {path:'TodoList',component:TodolistComponent},
+  {path:'UserList/:id',component:DetailTodoComponent},
   {path:'UserList',component:UsersComponentComponent},
   {path:'salles',component:SalleLisrComponent},
   {path:'salles/:id',component:DetailSalleComponent},
