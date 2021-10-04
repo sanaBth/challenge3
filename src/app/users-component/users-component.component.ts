@@ -4,6 +4,7 @@ import {Utilisateur} from 'src/app/model/utilisateur';
 import { CalculServiceService } from '../service/calcul-service.service';
 import { TodoserviceService } from '../service/todoservice.service';
 import { UserServiceService } from '../service/user-service.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-users-component',
   templateUrl: './users-component.component.html',
@@ -26,7 +27,8 @@ export class UsersComponentComponent implements OnInit {
       {id: 3, name: "Clementine Bauch", username: "Samantha", email:"Nathan@yesenia.net"}];
       constructor(private _todoservice : CalculServiceService
         ,private _userfromhttp : UserServiceService,
-        private _todofromhttp : TodoserviceService) { }
+        private _todofromhttp : TodoserviceService,
+        private router:Router) { }
 
     verifier(param:any)
     {
@@ -40,19 +42,22 @@ export class UsersComponentComponent implements OnInit {
     {
       
     }
-    getItem(id : any) {
+   /* getItem(id : any) {
       this._userfromhttp.getUsersId(id)
         .subscribe((item) => {
           this.selectedItem = item;
         })
-    }
+    }*/
     ngOnInit(): void
     {
            this.x = this._todoservice.getNumberOf(this.listUsers,"username", "Bret");
       //console.log(this.x);
-      this._userfromhttp.getUsers().subscribe(data=> this.listUs = data);
+    this._userfromhttp.getUsers().subscribe(data=> this.listUs = data);
     }
-  
+    onSelect(salle:any)
+    {
+      this.router.navigate(['/UserList',salle.id]);
+    }
 
 }
 
