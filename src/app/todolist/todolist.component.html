@@ -8,3 +8,9 @@
 </ul>
 <button type="submit" (click)="completedJob()">Bilan</button>
 {{message}}
+
+<h5>Liste des to do list from url</h5><ul>
+    <li *ngFor = "let t of listTodo;">
+        {{ t.id}}. {{ t.title}} - {{ t.completed}}
+    </li>
+</ul>

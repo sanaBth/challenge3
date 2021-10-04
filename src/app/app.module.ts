@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule,appRoutes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormulaireComponent } from './formulaire/formulaire.component';
@@ -23,6 +23,14 @@ import { TodolistComponent } from './todolist/todolist.component';
 import { CalculServiceService } from 'src/app/service/calcul-service.service';
 import { UsersComponentComponent } from './users-component/users-component.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+import { Path2Component } from './path2/path2.component';
+import { Path1Component } from './path1/path1.component';
+import { ErrorsComponentComponent } from './errors-component/errors-component.component';
+import { SalleLisrComponent } from './salle-lisr/salle-lisr.component';
+import { DetailSalleComponent } from './detail-salle/detail-salle.component';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +46,10 @@ import { UsersComponentComponent } from './users-component/users-component.compo
        Form6Component,
        TodolistComponent,
        UsersComponentComponent,
+       appRoutes,
+       ErrorsComponentComponent,
+       SalleLisrComponent,
+       DetailSalleComponent
   
   ],
   imports: [
@@ -52,7 +64,8 @@ import { UsersComponentComponent } from './users-component/users-component.compo
     MatIconModule,
     MatChipsModule,
     MatAutocompleteModule,
-  
+    HttpClientModule,
+ 
 
   ],
   providers: [CalculServiceService],

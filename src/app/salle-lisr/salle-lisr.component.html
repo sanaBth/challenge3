@@ -1,0 +1,4 @@
+<ul *ngFor = "let t of salles;">
+    <li >{{ t.id}} - {{ t.nom}} -{{ t.capacite}} <a (click)="onSelect(t)" routerLink="salles/t.id">Détails</a></li>
+  
+</ul>
