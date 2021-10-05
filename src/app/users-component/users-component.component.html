@@ -1,15 +1,11 @@
 <h1 class="mt-5 mb-5">Liste des utulisateurs</h1>
 
 <table class="table">
-    
         <thead>
             <tr>
-              
               <th scope="col">Name</th>
               <th scope="col">Username</th>
               <th scope="col">Email</th>
-       
-              
             </tr>
           </thead>
           <tbody>
@@ -28,10 +24,10 @@
 
 <h1 class="mt-5 mb-5">Liste des utulisateurs from http</h1>
 
-<table class="table">
+<table class=" table">
    
         <thead>
-            <tr>
+            <tr class="table-primary">
               
               <th scope="col">Name</th>
               <th scope="col">Username</th>
@@ -40,9 +36,9 @@
             </tr>
           </thead>
           <tbody>
-        <tr *ngFor = "let t of listUs;">
-            <th scope="row">{{ t.name}} </th> 
-            <td>{{ t.username}} </td> 
+        <tr class="bg-yellow" *ngFor = "let t of listUs;">
+            <td id="first-cell" scope="row">{{ t.name}} </td> 
+            <td class="table-primary">{{ t.username}} </td> 
              <td>{{ t.email}} </td>
             <td><a class="link-success text-decoration-none" routerLink="UserList/t.id" (click)="onSelect(t)">Voir To do</a></td>
         </tr>
