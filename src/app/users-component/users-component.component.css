@@ -2,3 +2,6 @@ td,th{
     width:300px;
     padding-top: 10px;
 }
+.bg-yellow{
+    background-color: yellow;
+}
