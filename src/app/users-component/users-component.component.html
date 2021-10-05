@@ -1,25 +1,50 @@
-<h5>Liste des utulisateurs</h5>
+<h1 class="mt-5 mb-5">Liste des utulisateurs</h1>
 
-<table class="table-primary">
-    <tbody>
+<table class="table">
+    
+        <thead>
+            <tr>
+              
+              <th scope="col">Name</th>
+              <th scope="col">Username</th>
+              <th scope="col">Email</th>
        
+              
+            </tr>
+          </thead>
+          <tbody>
         <tr *ngFor = "let t of listUsers;">
-            <th scope="row">{{ t.name}} </th> <td scope="row">{{ t.username}} </td>  <td>{{ t.email}} </td>
+            <th scope="row">{{ t.name}} </th> 
+            <td scope="row">{{ t.username}} </td>  
+                <td>{{ t.email}} </td>
         </tr>
     </tbody>
 </table>
-<p><input type="text" [(ngModel)]="username" name="username" >
+<p>
+    <input type="text" [(ngModel)]="username" name="username" >
     <button type="submit" (click)="verifier(username)">Vérifier</button>
 </p>
 <p >{{message}}</p>
-<h5>Liste des utulisateurs from http</h5>
 
-<table class="table-primary">
-    <tbody>
-       
+<h1 class="mt-5 mb-5">Liste des utulisateurs from http</h1>
+
+<table class="table">
+   
+        <thead>
+            <tr>
+              
+              <th scope="col">Name</th>
+              <th scope="col">Username</th>
+              <th scope="col">Email</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
         <tr *ngFor = "let t of listUs;">
-            <th scope="row">{{ t.name}} </th> <td scope="row">{{ t.username}} </td>  <td>{{ t.email}} </td>
-            <td><a routerLink="UserList/t.id" (click)="onSelect(t)">voir To do</a></td>
+            <th scope="row">{{ t.name}} </th> 
+            <td>{{ t.username}} </td> 
+             <td>{{ t.email}} </td>
+            <td><a class="link-success text-decoration-none" routerLink="UserList/t.id" (click)="onSelect(t)">Voir To do</a></td>
         </tr>
     </tbody>
 </table>
